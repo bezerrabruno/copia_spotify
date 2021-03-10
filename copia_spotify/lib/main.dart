@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
+import 'package:copia_spotify/page/home.dart';
+
 void main() {
   runApp(SpotifyCopiaApp());
 }
 
 class SpotifyCopiaApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Material();
+    return MaterialApp(
+      title: 'Spotify',
+      home: StakPage(),
+    );
   }
 }
