@@ -1,4 +1,3 @@
-import 'package:copia_spotify/app/redux/app/app_state.dart';
 import 'package:copia_spotify/app/redux/navigator/navigator_action.dart';
 import 'package:copia_spotify/app/redux/navigator/navigator_state.dart';
 
