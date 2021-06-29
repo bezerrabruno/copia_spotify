@@ -1,15 +1,16 @@
+import 'package:copia_spotify/app/models/music.dart';
+import 'package:copia_spotify/app/models/primary/user.dart';
+
 class Playlist {
-  final String name;
-  final String creator;
-  final bool download;
-  final List musics;
-  final List recommended;
+  final String name, creator;
+
+  final List<Music> musics;
+  final List<User> employees;
 
   Playlist({
     this.name,
     this.creator,
-    this.download,
     this.musics,
-    this.recommended,
+    this.employees,
   });
 }

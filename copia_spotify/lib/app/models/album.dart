@@ -1,15 +1,15 @@
+import 'package:flutter/material.dart';
+
+import 'package:copia_spotify/app/models/music.dart';
+
 class Album {
-  final String name;
-  final String artist;
-  final String data;
-  final bool download;
-  final List musics;
+  final String name, artist, data;
+  final List<Music> musics;
 
   Album({
-    this.name,
-    this.artist,
-    this.data,
-    this.download,
+    @required this.name,
+    @required this.artist,
+    @required this.data,
     this.musics,
   });
 }

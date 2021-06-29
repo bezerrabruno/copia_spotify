@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:sizer/sizer.dart';
 
 import 'package:copia_spotify/app/page/home/manager_home.dart';
 import 'package:copia_spotify/app/redux/app/store.dart';
