@@ -1,7 +1,15 @@
 class NavigatorAction {}
 
-class Page1 extends NavigatorAction {}
+class PageStart extends NavigatorAction {}
 
-class Page2 extends NavigatorAction {}
+class PageSearch extends NavigatorAction {}
 
-class Page3 extends NavigatorAction {}
+class PageLibrary extends NavigatorAction {}
+
+class PageArtist extends NavigatorAction {}
+
+//class PageLibrary extends NavigatorAction {}
+
+//class PageLibrary extends NavigatorAction {}
+
+//class PageLibrary extends NavigatorAction {}

@@ -1,4 +1,7 @@
+import 'package:copia_spotify/app/redux/app/app_state.dart';
+import 'package:copia_spotify/app/redux/navigator/navigator_action.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sizer/sizer.dart';
 
 import 'package:copia_spotify/app/models/album.dart';
@@ -104,14 +107,7 @@ class DivRecent extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           if (item is Artist) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => Scaffold(
-                  backgroundColor: Colors.blueGrey,
-                ),
-              ),
-            );
+            StoreProvider.of<AppState>(context).dispatch(PageArtist());
           } else if (item is Album) {
             Navigator.push(
               context,

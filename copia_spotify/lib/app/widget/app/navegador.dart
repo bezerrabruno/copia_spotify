@@ -16,10 +16,10 @@ class Navegador extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              StoreProvider.of<AppState>(context).dispatch(Page1());
+              StoreProvider.of<AppState>(context).dispatch(PageStart());
             },
             child: SizedBox(
-              height: double.infinity,
+              height: double.maxFinite,
               width: 20.w,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +42,7 @@ class Navegador extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              StoreProvider.of<AppState>(context).dispatch(Page2());
+              StoreProvider.of<AppState>(context).dispatch(PageSearch());
             },
             child: SizedBox(
               height: double.infinity,
@@ -68,7 +68,7 @@ class Navegador extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              StoreProvider.of<AppState>(context).dispatch(Page3());
+              StoreProvider.of<AppState>(context).dispatch(PageLibrary());
             },
             child: SizedBox(
               height: double.infinity,

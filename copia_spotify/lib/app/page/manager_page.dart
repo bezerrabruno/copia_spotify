@@ -3,6 +3,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import 'package:copia_spotify/app/page/home/search.dart';
 import 'package:copia_spotify/app/page/home/start.dart';
+import 'package:copia_spotify/app/page/standards/artists.dart';
 import 'package:copia_spotify/app/redux/app/app_state.dart';
 import 'package:copia_spotify/app/redux/app/store.dart';
 import 'package:copia_spotify/app/widget/app/navegador.dart';
@@ -12,6 +13,7 @@ class ManagerPage extends StatelessWidget {
     InicioPage(),
     SearchPage(),
     Scaffold(),
+    ArtistPage(),
   ];
 
   @override
