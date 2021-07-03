@@ -1,7 +1,8 @@
-import 'package:copia_spotify/app/redux/navigator/navigator_action.dart';
-import 'package:copia_spotify/app/redux/navigator/navigator_state.dart';
+import '/app/features/buttomNavigator/redux/buttomNavigator_action.dart';
+import '/app/features/buttomNavigator/redux/buttomNavigator_state.dart';
 
-NavigatorState navigatorReducer(NavigatorState state, dynamic action) {
+ButtomNavigatorState navigatorReducer(
+    ButtomNavigatorState state, dynamic action) {
   if (action is PageStart) {
     return state.update(
       index: 0,

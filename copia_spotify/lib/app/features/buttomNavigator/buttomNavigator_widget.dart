@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import 'package:copia_spotify/app/redux/app/app_state.dart';
-import 'package:copia_spotify/app/redux/navigator/navigator_action.dart';
+import '/app/core/redux/app_state.dart';
+import '/app/features/buttomNavigator/redux/buttomNavigator_action.dart';
 
-class Navegador extends StatelessWidget {
+class ButtomNavigator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

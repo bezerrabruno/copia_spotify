@@ -1,7 +1,7 @@
-import 'package:copia_spotify/app/redux/navigator/navigator_state.dart';
+import '/app/features/buttomNavigator/redux/buttomNavigator_state.dart';
 
 class AppState {
-  NavigatorState navigador = NavigatorState();
+  ButtomNavigatorState navigador = ButtomNavigatorState();
 
   AppState({
     this.navigador,
@@ -9,12 +9,12 @@ class AppState {
 
   factory AppState.initialState() {
     return AppState(
-      navigador: NavigatorState.initialState(),
+      navigador: ButtomNavigatorState.initialState(),
     );
   }
 
   AppState update({
-    NavigatorState navigador,
+    ButtomNavigatorState navigador,
   }) {
     return AppState(
       navigador: navigador ?? this.navigador,
