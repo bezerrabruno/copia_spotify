@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '/app/models/album.dart';
 import '/app/core/models/artist.dart';
-import '/app/features/start/widgets/divStart_widget.dart';
-import '/app/features/start/widgets/divDefault_widget.dart';
+import '/app/features/album/album.dart';
+import '/app/features/home/pages/start/widgets/divStart_widget.dart';
+import '/app/features/home/pages/start/widgets/divDefault_widget.dart';
 
 class StartPage extends StatelessWidget {
   @override

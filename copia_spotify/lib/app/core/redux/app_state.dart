@@ -1,15 +1,15 @@
-import '/app/features/buttomNavigator/redux/buttomNavigator_state.dart';
+import '../../features/home/redux/buttomNavigator_state.dart';
 
 class AppState {
-  ButtomNavigatorState navigador = ButtomNavigatorState();
+  ButtomNavigatorState navigator = ButtomNavigatorState();
 
   AppState({
-    this.navigador,
+    this.navigator,
   });
 
   factory AppState.initialState() {
     return AppState(
-      navigador: ButtomNavigatorState.initialState(),
+      navigator: ButtomNavigatorState.initialState(),
     );
   }
 
@@ -17,7 +17,7 @@ class AppState {
     ButtomNavigatorState navigador,
   }) {
     return AppState(
-      navigador: navigador ?? this.navigador,
+      navigator: navigador ?? this.navigator,
     );
   }
 }

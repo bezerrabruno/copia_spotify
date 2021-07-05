@@ -1,12 +1,11 @@
+import 'package:copia_spotify/app/core/models/artist.dart';
+import 'package:copia_spotify/app/core/redux/app_state.dart';
+import 'package:copia_spotify/app/features/album/album.dart';
+import 'package:copia_spotify/app/features/home/redux/buttomNavigator_action.dart';
+import 'package:copia_spotify/app/features/playlist/playlist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sizer/sizer.dart';
-
-import '/app/core/redux/app_state.dart';
-import '/app/features/buttomNavigator/redux/buttomNavigator_action.dart';
-import '/app/models/album.dart';
-import '/app/core/models/artist.dart';
-import '/app/models/playlist.dart';
 
 class DivStart extends StatelessWidget {
   final List items = [

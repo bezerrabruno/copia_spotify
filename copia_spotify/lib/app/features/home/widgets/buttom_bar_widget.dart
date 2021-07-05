@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '/app/core/redux/app_state.dart';
-import '/app/features/buttomNavigator/redux/buttomNavigator_action.dart';
+import '../redux/buttomNavigator_action.dart';
 
-class ButtomNavigator extends StatelessWidget {
+class ButtomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -68,7 +69,7 @@ class ButtomNavigator extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              StoreProvider.of<AppState>(context).dispatch(PageLibrary());
+              StoreProvider.of<AppState>(context).dispatch(PageStart());
             },
             child: SizedBox(
               height: double.infinity,

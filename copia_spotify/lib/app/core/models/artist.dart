@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:copia_spotify/app/models/album.dart';
-import 'package:copia_spotify/app/models/music.dart';
-import 'package:copia_spotify/app/models/playlist.dart';
+import 'package:copia_spotify/app/features/album/album.dart';
+import 'package:copia_spotify/app/features/music/music.dart';
+import 'package:copia_spotify/app/features/playlist/playlist.dart';
 
 class Artist {
   final String name, info;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sizer/sizer.dart';
 
 import '/app/core/redux/store.dart';
-import 'manager_widget.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -14,8 +14,8 @@ class AppWidget extends StatelessWidget {
         builder: (context, orientation, deviceType) {
           return MaterialApp(
             title: 'Spotify',
-            home: ManagerWidget(),
-          );
+            initialRoute: '/home/start',
+          ).modular();
         },
       ),
     );

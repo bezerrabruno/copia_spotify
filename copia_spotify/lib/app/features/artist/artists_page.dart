@@ -10,10 +10,6 @@ class ArtistPage extends StatelessWidget {
         SliverAppBar(
           centerTitle: true,
           title: Text('"Artista"'),
-          leading: IconButton(
-            onPressed: () => true,
-            icon: Icon(Icons.arrow_back),
-          ),
           actions: [
             Center(
               child: GestureDetector(

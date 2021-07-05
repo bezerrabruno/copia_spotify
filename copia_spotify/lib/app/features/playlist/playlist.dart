@@ -1,4 +1,4 @@
-import 'package:copia_spotify/app/models/music.dart';
+import 'package:copia_spotify/app/features/music/music.dart';
 import 'package:copia_spotify/app/core/models/user.dart';
 
 class Playlist {

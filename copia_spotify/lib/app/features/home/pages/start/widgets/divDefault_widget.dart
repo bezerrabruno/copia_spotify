@@ -1,11 +1,11 @@
+import 'package:copia_spotify/app/core/models/artist.dart';
+import 'package:copia_spotify/app/core/redux/app_state.dart';
+import 'package:copia_spotify/app/features/album/album.dart';
+import 'package:copia_spotify/app/features/home/redux/buttomNavigator_action.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sizer/sizer.dart';
-
-import '/app/core/redux/app_state.dart';
-import '/app/features/buttomNavigator/redux/buttomNavigator_action.dart';
-import '/app/core/models/artist.dart';
-import '/app/models/album.dart';
 
 class DivDefault extends StatelessWidget {
   final String title;
@@ -82,7 +82,7 @@ class DivDefault extends StatelessWidget {
 
   Widget _cardArtist(BuildContext context, item) {
     return GestureDetector(
-      onTap: () => StoreProvider.of<AppState>(context).dispatch(PageArtist()),
+      onTap: () => Modular.to.navigate('./artist'),
       child: Column(
         children: [
           Padding(
