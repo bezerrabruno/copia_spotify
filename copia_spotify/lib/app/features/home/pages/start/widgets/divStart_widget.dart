@@ -1,21 +1,17 @@
-import 'package:copia_spotify/app/core/models/artist.dart';
-import 'package:copia_spotify/app/core/redux/app_state.dart';
-import 'package:copia_spotify/app/features/album/album.dart';
-import 'package:copia_spotify/app/features/home/redux/buttomNavigator_action.dart';
-import 'package:copia_spotify/app/features/playlist/playlist.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../../artist/model/artist.dart';
+import '../../../../album/model/album.dart';
+import '../../../../playlist/model/playlist.dart';
+
 class DivStart extends StatelessWidget {
-  final List items = [
-    Artist(name: 'Zarastruta', info: ''),
-    Playlist(name: 'Somente Apenas'),
-    Playlist(name: 'Lo-Fi'),
-    Artist(name: 'Mc Poze', info: ''),
-    Album(name: 'Passaporte', artist: '', data: ''),
-    Artist(name: '1Kilo', info: ''),
-  ];
+  final List items;
+
+  DivStart({
+    this.items,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -45,28 +41,14 @@ class DivStart extends StatelessWidget {
                           Icons.history,
                           color: Colors.white,
                         ),
-                        onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => Scaffold(
-                              backgroundColor: Colors.amber,
-                            ),
-                          ),
-                        ),
+                        onPressed: () => true,
                       ),
                       IconButton(
                         icon: Icon(
                           Icons.settings_outlined,
                           color: Colors.white,
                         ),
-                        onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => Scaffold(
-                              backgroundColor: Colors.blueAccent,
-                            ),
-                          ),
-                        ),
+                        onPressed: () => true,
                       ),
                     ],
                   ),
@@ -106,24 +88,11 @@ class DivStart extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           if (item is Artist) {
-            StoreProvider.of<AppState>(context).dispatch(PageArtist());
+            Modular.to.pushNamed('./artist');
           } else if (item is Album) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) =>
-                    Scaffold(backgroundColor: Colors.purpleAccent),
-              ),
-            );
+            Modular.to.pushNamed('./album');
           } else if (item is Playlist) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => Scaffold(
-                  backgroundColor: Colors.deepOrangeAccent,
-                ),
-              ),
-            );
+            Modular.to.pushNamed('./artist');
           }
         },
         child: Container(
@@ -144,7 +113,7 @@ class DivStart extends StatelessWidget {
                     bottomLeft: Radius.circular(6.0),
                   ),
                   image: DecorationImage(
-                    image: AssetImage('images/musica.jpg'),
+                    image: AssetImage('lib/app/assets/images/musica.jpg'),
                     fit: BoxFit.cover,
                   ),
                 ),

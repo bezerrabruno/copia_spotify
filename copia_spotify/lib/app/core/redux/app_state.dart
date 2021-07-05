@@ -1,23 +1,23 @@
-import '../../features/home/redux/buttomNavigator_state.dart';
+import '../../features/home/redux/home_state.dart';
 
 class AppState {
-  ButtomNavigatorState navigator = ButtomNavigatorState();
+  HomeState home = HomeState();
 
   AppState({
-    this.navigator,
+    this.home,
   });
 
   factory AppState.initialState() {
     return AppState(
-      navigator: ButtomNavigatorState.initialState(),
+      home: HomeState.initialState(),
     );
   }
 
   AppState update({
-    ButtomNavigatorState navigador,
+    HomeState home,
   }) {
     return AppState(
-      navigator: navigador ?? this.navigator,
+      home: home ?? this.home,
     );
   }
 }

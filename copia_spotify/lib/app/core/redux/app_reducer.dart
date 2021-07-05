@@ -1,10 +1,10 @@
 import '/app/core/redux/app_state.dart';
-import '../../features/home/redux/buttomNavigator_action.dart';
-import '../../features/home/redux/buttomNavigator_reducer.dart';
+import '../../features/home/redux/home_reducer.dart';
+import '../../features/home/redux/home_action.dart';
 
 AppState appReducer(AppState state, dynamic action) {
-  if (action is ButtomNavigatorAction) {
-    return state.update(navigador: navigatorReducer(state.navigator, action));
+  if (action is HomeAction) {
+    return state.update(home: homeReducer(state.home, action));
   }
   return state;
 }

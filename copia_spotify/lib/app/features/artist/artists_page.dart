@@ -44,7 +44,7 @@ class ArtistPage extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/musica.jpg'),
+                          image: AssetImage('lib/app/assets/images/musica.jpg'),
                           fit: BoxFit.cover)),
                 ),
                 Container(

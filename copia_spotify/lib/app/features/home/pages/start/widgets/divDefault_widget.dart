@@ -1,11 +1,9 @@
-import 'package:copia_spotify/app/core/models/artist.dart';
-import 'package:copia_spotify/app/core/redux/app_state.dart';
-import 'package:copia_spotify/app/features/album/album.dart';
-import 'package:copia_spotify/app/features/home/redux/buttomNavigator_action.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sizer/sizer.dart';
+
+import '../../../../artist/model/artist.dart';
+import '../../../../album/model/album.dart';
 
 class DivDefault extends StatelessWidget {
   final String title;
@@ -82,7 +80,7 @@ class DivDefault extends StatelessWidget {
 
   Widget _cardArtist(BuildContext context, item) {
     return GestureDetector(
-      onTap: () => Modular.to.navigate('./artist'),
+      onTap: () => Modular.to.pushNamed('./artist'),
       child: Column(
         children: [
           Padding(
@@ -93,7 +91,7 @@ class DivDefault extends StatelessWidget {
               decoration: ShapeDecoration(
                 color: Colors.white,
                 image: DecorationImage(
-                  image: AssetImage('images/musica.jpg'),
+                  image: AssetImage('lib/app/assets/images/musica.jpg'),
                   fit: BoxFit.cover,
                 ),
                 shape: CircleBorder(),
@@ -124,13 +122,7 @@ class DivDefault extends StatelessWidget {
 
   Widget _cardAlbum(BuildContext context, item) {
     return GestureDetector(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (BuildContext context) =>
-              Scaffold(backgroundColor: Colors.purpleAccent),
-        ),
-      ),
+      onTap: () => Modular.to.pushNamed('./album'),
       child: Column(
         children: [
           Padding(
@@ -140,7 +132,7 @@ class DivDefault extends StatelessWidget {
               width: 40.w,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/musica.jpg'),
+                  image: AssetImage('lib/app/assets/images/musica.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),

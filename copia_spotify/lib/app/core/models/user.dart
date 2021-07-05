@@ -1,6 +1,6 @@
-import 'package:copia_spotify/app/features/music/music.dart';
-import 'package:copia_spotify/app/features/playlist/playlist.dart';
-import 'package:copia_spotify/app/core/models/artist.dart';
+import 'package:copia_spotify/app/features/music/model/music.dart';
+import 'package:copia_spotify/app/features/playlist/model/playlist.dart';
+import 'package:copia_spotify/app/features/artist/model/artist.dart';
 
 class User {
   final String name;

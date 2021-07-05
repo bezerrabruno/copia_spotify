@@ -1,4 +1,3 @@
-import 'package:copia_spotify/app/features/artist/artist_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '/app/features/home/home_module.dart';

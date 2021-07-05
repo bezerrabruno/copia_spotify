@@ -1,4 +1,3 @@
-import 'package:copia_spotify/app/core/app_module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
